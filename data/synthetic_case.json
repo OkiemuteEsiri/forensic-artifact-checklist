@@ -1,0 +1,74 @@
+[
+  {
+    "artifact_id": "ART-001",
+    "name": "Identity provider sign-in logs",
+    "category": "identity",
+    "status": "present",
+    "priority": "critical",
+    "source": "synthetic-idp-export",
+    "collected_at": "2026-09-10T12:00:00Z",
+    "evidence_reference": "EVID-001",
+    "notes": "Synthetic authentication history for a fictional user account.",
+    "attack_techniques": ["T1078"]
+  },
+  {
+    "artifact_id": "ART-002",
+    "name": "Endpoint process creation telemetry",
+    "category": "process",
+    "status": "partial",
+    "priority": "critical",
+    "source": "synthetic-edr-export",
+    "collected_at": "2026-09-10T12:05:00Z",
+    "evidence_reference": "EVID-002",
+    "notes": "Coverage gap exists for the first 30 minutes of the synthetic incident window.",
+    "attack_techniques": ["T1059.001"]
+  },
+  {
+    "artifact_id": "ART-003",
+    "name": "DNS and proxy network telemetry",
+    "category": "network",
+    "status": "missing",
+    "priority": "high",
+    "source": "synthetic-network-stack",
+    "collected_at": null,
+    "evidence_reference": null,
+    "notes": "Network evidence unavailable for the synthetic investigation window.",
+    "attack_techniques": ["T1071.004"]
+  },
+  {
+    "artifact_id": "ART-004",
+    "name": "Registry persistence evidence",
+    "category": "registry",
+    "status": "present",
+    "priority": "high",
+    "source": "synthetic-registry-export",
+    "collected_at": "2026-09-10T12:10:00Z",
+    "evidence_reference": "EVID-004",
+    "notes": "Synthetic snapshot of relevant autorun locations.",
+    "attack_techniques": ["T1060"]
+  },
+  {
+    "artifact_id": "ART-005",
+    "name": "EDR alert and host timeline",
+    "category": "edr",
+    "status": "missing",
+    "priority": "critical",
+    "source": "synthetic-edr-console",
+    "collected_at": null,
+    "evidence_reference": null,
+    "notes": "Synthetic host timeline has not yet been exported.",
+    "attack_techniques": ["T1562.001"]
+  },
+  {
+    "artifact_id": "ART-006",
+    "name": "Unified incident timeline",
+    "category": "timeline",
+    "status": "partial",
+    "priority": "high",
+    "source": "analyst-workbook",
+    "collected_at": "2026-09-10T12:30:00Z",
+    "evidence_reference": "EVID-006",
+    "notes": "Synthetic timeline excludes unavailable network telemetry.",
+    "attack_techniques": ["T1021", "T1078"]
+  }
+]
